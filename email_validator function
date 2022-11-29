@@ -1,0 +1,12 @@
+# Mail checker program
+def email_validator(email):
+    api_key = "4b693730-bbdd-490c-8875-976f24900b54"
+    response = requests.get('https://isitarealemail.com/api/email/validate', params={'email': email},
+                            headers={'Authorization': "Bearer " + api_key})
+    status = response.json()['status']
+
+    if status == "valid":
+        print("The email is valid")
+    else:
+        print("The email is in-valid")
+        
