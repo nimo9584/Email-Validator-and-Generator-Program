@@ -1,0 +1,24 @@
+while True:
+    print("You have 2 choices:")
+    print("1) Generate a fake email")
+    print("2) check the validity of an email")
+    print("3) exit the program")
+
+    ch1 = int(input("Enter your choice: "))
+    if ch1 == 1:
+        num_generator = int(input("Enter how many emails do you want to generate: "))
+        for i in range(num_generator):
+            fake_list = []
+            fake = Faker()
+            fake_mail = fake.email()
+            fake_list.append(fake_mail)
+            for j in fake_list:
+                print(j)
+        continue
+    elif ch1 == 2:
+        email_input = input("Enter a valid email address: ")
+        email_validator(email_input)
+        continue
+
+    elif ch1 == 3:
+        break
