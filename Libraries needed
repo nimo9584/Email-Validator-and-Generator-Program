@@ -1,0 +1,6 @@
+# Libraries to be imported
+import requests
+from faker import Faker
+import json
+
+"requests" is the http library of python. One of it's functions is to get us connected to web-servers via unique api keys and carry out the transactions needed for the program.
